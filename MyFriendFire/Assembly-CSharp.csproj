@@ -60,18 +60,6 @@
      <Compile Include="Assets\RabbitMove.cs" />
      <Compile Include="Assets\RabbitSpawn.cs" />
      <Compile Include="Assets\wolfmovement.cs" />
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -81,11 +69,17 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.CollabProxy.Editor">
+ <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-weaver.Editor">
  <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
@@ -107,6 +101,12 @@
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.DataPrivacy">
+ <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
  <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
@@ -294,9 +294,6 @@
  <Reference Include="UnityEngine.XRModule">
  <HintPath>E:/unity/2019.2.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
@@ -305,9 +302,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>E:/CS-383/SkyIsFallingGames/MyFriendFire/Library/PackageCache/com.unity.purchasing@2.0.6/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>E:/unity/2019.2.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
