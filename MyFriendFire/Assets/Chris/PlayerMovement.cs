@@ -18,5 +18,11 @@ public class PlayerMovement : MonoBehaviour
         inputVector = new Vector3(Input.GetAxis("Horizontal") * 10f, 0, Input.GetAxis("Vertical") * 10f);
 		transform.LookAt(transform.position + new Vector3(inputVector.x, 0, inputVector.z));
 		playerBody.velocity = inputVector;
+
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
