@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8570228480205751500}
   - component: {fileID: 8570228480205751503}
   - component: {fileID: 8570228480205751502}
-  - component: {fileID: 8570228480205751501}
   m_Layer: 0
   m_Name: trigger
   m_TagString: Untagged
@@ -94,21 +93,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8570228480205751501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8570228480205751496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c41c83f9e02a8d48a4b7a9995f72da6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 8570228480686391066}
-  Prefab: {fileID: 2634471197912355878, guid: 6c5d37a290f459041995ebae86897266, type: 3}
-  numRabbits: 5
 --- !u!1 &8570228480686391045
 GameObject:
   m_ObjectHideFlags: 0
