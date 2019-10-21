@@ -8,7 +8,7 @@ public class GenerateEnemies : MonoBehaviour
     public int xPos;
     public int zPos;
     public int enemyCount;
-
+    public int spawnNumber;
     void Start()
     {
         StartCoroutine(EnemyDrop());
@@ -16,12 +16,12 @@ public class GenerateEnemies : MonoBehaviour
 
     IEnumerator EnemyDrop()
     {
-        while(enemyCount < 10)
+        while(enemyCount < spawnNumber)
         {
             xPos = Random.Range(1, 200); // x position of RandomSpawn range
             zPos = Random.Range(1, 200); // z position of RandomSpawn range
             Instantiate(theEnemy, new Vector3(xPos, 0.5f, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.01f);
             enemyCount += 1;
         }
     }
