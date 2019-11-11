@@ -67,7 +67,7 @@ public class RabbitMove : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(DropItems, transform.position, DropItems.transform.rotation);
+       //Instantiate(DropItems, transform.position, DropItems.transform.rotation);
     }
 
     void Die()
