@@ -10,6 +10,7 @@ TagManager:
   - tree
   - ground
   - ShowOnPause
+  - NPC
   layers:
   - Default
   - TransparentFX
