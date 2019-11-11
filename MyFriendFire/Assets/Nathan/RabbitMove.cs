@@ -12,11 +12,7 @@ public class RabbitMove : MonoBehaviour
     private bool isRotatingR = false;
     private bool isWalking = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject drop; // object that drops from npc (the rabbit) when it is killed.
 
     // Update is called once per frame
     void Update()
@@ -43,7 +39,7 @@ public class RabbitMove : MonoBehaviour
     {
         int rotTime = Random.Range(1, 3);
         int rotateWait = Random.Range(1, 5);
-        int rotateLorR = Random.Range(1, 2);
+        int rotateLorR = Random.Range(1, 3);
         int MoveWait = Random.Range(1, 8);
         int MoveTime = Random.Range(1, 5);
 
@@ -67,5 +63,14 @@ public class RabbitMove : MonoBehaviour
             isRotatingL = false;
         }
         isWandering = false;
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(DropItems, transform.position, DropItems.transform.rotation);
+    }
+
+    void Die()
+    {
     }
 }

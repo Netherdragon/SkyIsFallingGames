@@ -13,9 +13,9 @@ public class DropItems : MonoBehaviour
         itemToDrop.SetActive(true); // check if item can be dropped
         itemToDrop.transform.parent = null;
         yield return new WaitForSeconds(0.05f);
-        if(itemToDrop.GetComponent<>() != null)
-        {
-            itemToDrop.GetComponent<Item_Master>().CallEventObjectThrow(); // spawns game object
-        }
+        //if(itemToDrop.GetComponent<>() != null)
+        //{
+        //    itemToDrop.GetComponent<Item_Master>().CallEventObjectThrow(); // spawns game object
+        //}
     }
 }
