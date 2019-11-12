@@ -52,7 +52,7 @@ public class SpawnTrees : MonoBehaviour
                 spawnAttempts++;
 
                 // Pick a random position
-                spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 2, Random.Range(-spawnValues.z, spawnValues.z));
+                spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 0, Random.Range(-spawnValues.z, spawnValues.z));
                 //Debug.Log("1st spawnValues: " + spawnValues.x + "  " + spawnValues.z);
                 // This position is valid until proven invalid
                 validPosition = true;
