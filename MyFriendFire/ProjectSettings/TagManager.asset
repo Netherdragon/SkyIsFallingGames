@@ -11,6 +11,7 @@ TagManager:
   - ground
   - ShowOnPause
   - NPC
+  - Meat
   layers:
   - Default
   - TransparentFX

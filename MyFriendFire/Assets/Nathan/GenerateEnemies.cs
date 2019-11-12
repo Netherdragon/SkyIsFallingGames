@@ -21,8 +21,8 @@ public class GenerateEnemies : MonoBehaviour
     {
         while(enemyCount < spawnNumber)
         {
-            xPos = Random.Range(-30, 30); // x position of RandomSpawn range spawn -498 to 498
-            zPos = Random.Range(-30, 30); // z position of RandomSpawn range spawn -498 to 498
+            xPos = Random.Range(-498, 498); // x position of RandomSpawn range spawn -498 to 498
+            zPos = Random.Range(-498, 498); // z position of RandomSpawn range spawn -498 to 498
             Instantiate(theEnemy, new Vector3(xPos, 0.5f, zPos), Quaternion.identity);
             // yield return new WaitForSeconds(0.01f);
             enemyCount += 1;
