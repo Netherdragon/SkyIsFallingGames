@@ -5,12 +5,11 @@ using UnityEngine;
 public class NpcFollow : MonoBehaviour
 {
     GameObject ThePlayer;
-    private float TargetDistance;
-    public float AllowedDistance = 0;
-    public GameObject TheNPC;
+    public float TargetDistance; // var to ignore distances greater than targetDistance
+    public float AllowedDistance = 5;
     public float FollowSpeed;
     public RaycastHit Shot;
-    //public bool aggression = false;
+
 
     // Update is called once per frame
 
@@ -18,17 +17,20 @@ public class NpcFollow : MonoBehaviour
     {
         ThePlayer = GameObject.FindWithTag("Player");
     }
+
     void Update()
     {
         transform.LookAt(ThePlayer.transform);
-        if(Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward),out Shot)) // wolf tracks the player
+        
+        if (Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward),out Shot)) // wolf tracks the player
         {
             TargetDistance = Shot.distance; // if target distance is greater than shot distance, wolf should ignore the player
-            if(TargetDistance <= AllowedDistance /*&& aggression == true*/)
+     //       Debug.Log("wolf distance: " + TargetDistance);
+
+            if(TargetDistance <= AllowedDistance)
             {
                 FollowSpeed = 0.1f;
                 transform.position = Vector3.MoveTowards(transform.position, ThePlayer.transform.position, FollowSpeed);
-
             }
             else
             {
@@ -37,3 +39,10 @@ public class NpcFollow : MonoBehaviour
         }
     }
 }
+
+/*void followPlayer(float speed)
+{
+    FollowSpeed = 0.1f;
+    Transform.posit
+}
+*/
