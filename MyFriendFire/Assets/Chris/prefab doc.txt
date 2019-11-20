@@ -1,0 +1,6 @@
+Player Prefab Documentation
+
+1) drag the prefab into your game's prefab folder (if this does not exist make one)
+2) drag the chaacter prefab onto the game hierarchy and resize as needed
+3) add your movement script (not included) onto the game character
+4) enjoy using your new game character in your game
