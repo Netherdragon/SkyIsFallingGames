@@ -1,0 +1,5 @@
+To use the prefab:
+
+1) drag the prefab into the game folder in Unity
+2) from Unity, drag the prefab into the Hierachy and add your movement script to it (movement script not included)
+3) enjoy using your new player character look
