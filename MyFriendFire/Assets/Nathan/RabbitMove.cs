@@ -12,7 +12,6 @@ public class RabbitMove : MonoBehaviour
     private bool isRotatingR = false;
     private bool isWalking = false;
 
-    public GameObject drop; // object that drops from npc (the rabbit) when it is killed.
 
     // Update is called once per frame
     void Update()
@@ -35,42 +34,39 @@ public class RabbitMove : MonoBehaviour
         }
     }
 
+    // Function for bunny wander AI
     IEnumerator Wander()
     {
-        int rotTime = Random.Range(1, 3);
-        int rotateWait = Random.Range(1, 5);
-        int rotateLorR = Random.Range(1, 3);
-        int MoveWait = Random.Range(1, 8);
-        int MoveTime = Random.Range(1, 5);
+        int rotTime = Random.Range(1, 3); // time bunny is rotating
+        int rotateWait = Random.Range(1, 5); // time before bunny rotates
+        int rotateLorR = Random.Range(1, 3); // rotate direction
+        int MoveWait = Random.Range(1, 8); // time before bunny moves forward
+        int MoveTime = Random.Range(1, 5); // time bunny moves
 
         isWandering = true;
 
-        yield return new WaitForSeconds(MoveWait);
+        yield return new WaitForSeconds(MoveWait); // bunny pauses before moving
         isWalking = true;
-        yield return new WaitForSeconds(MoveTime);
+
+        yield return new WaitForSeconds(MoveTime); // bunny moves for move time
         isWalking = false;
-        yield return new WaitForSeconds(rotateWait);
+
+        yield return new WaitForSeconds(rotateWait); // bunny waits for rotate wait 
+        // rotate right
         if(rotateLorR == 1)
         {
             isRotatingR = true;
             yield return new WaitForSeconds(rotTime);
             isRotatingR = false;
         }
+        // rotate left
         if(rotateLorR == 2)
         {
             isRotatingL = true;
             yield return new WaitForSeconds(rotTime);
             isRotatingL = false;
         }
-        isWandering = false;
-    }
 
-    private void OnDestroy()
-    {
-       //Instantiate(DropItems, transform.position, DropItems.transform.rotation);
-    }
-
-    void Die()
-    {
+        isWandering = false; // end wander
     }
 }
