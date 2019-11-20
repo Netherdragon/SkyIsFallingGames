@@ -12,6 +12,7 @@ public class NpcFollow : MonoBehaviour
 
 
     // Update is called once per frame
+
     private void Start()
     {
         ThePlayer = GameObject.FindWithTag("Player");
@@ -29,12 +30,19 @@ public class NpcFollow : MonoBehaviour
             if(TargetDistance <= AllowedDistance)
             {
                 FollowSpeed = 0.1f;
-                transform.position = Vector3.MoveTowards(transform.position, ThePlayer.transform.position, FollowSpeed); // wolf moves towards the player
+                transform.position = Vector3.MoveTowards(transform.position, ThePlayer.transform.position, FollowSpeed);
             }
             else
             {
-                FollowSpeed = 0; // wolf is too far away from player to chase so followspeed is 0.
+                FollowSpeed = 0;
             }
         }
     }
 }
+
+/*void followPlayer(float speed)
+{
+    FollowSpeed = 0.1f;
+    Transform.posit
+}
+*/

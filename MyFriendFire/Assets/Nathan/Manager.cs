@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-// SINGLETON
 public class Manager : MonoBehaviour
 {
     public static Manager instance = null; // game manager is empty
     public int HP = 5; // Player health
-
     void Awake()
     {
         if (instance == null) // game manager is empty
@@ -17,10 +14,14 @@ public class Manager : MonoBehaviour
             Destroy(gameObject); // destroys extra game manager
     }
 
-   // function adds health to the player.
    public void AddHealth()
     {
         HP++; // game manager increases player health when player touches meat.
     }
     
+
+    void Update()
+    {
+        
+    }
 }
