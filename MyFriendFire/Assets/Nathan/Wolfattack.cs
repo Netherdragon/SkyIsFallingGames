@@ -26,7 +26,8 @@ public class Wolfattack : MonoBehaviour
         {
             Debug.Log("You ate some meat");
             health++; // health increase
-            if(health >= 10)
+
+            if(health >= 10) // hp capped at 10
             {
                 health = 10;
                 Manager.instance.HP = 10;

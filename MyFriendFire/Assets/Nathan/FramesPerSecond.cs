@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FramesPerSecond : MonoBehaviour
 {
-    Rect fpsRect;
+    Rect fpsRect; // GUI interface
     
     GUIStyle style;
     private float fps;
@@ -17,14 +17,16 @@ public class FramesPerSecond : MonoBehaviour
         style = new GUIStyle();
         style.fontSize = 30;
 
-        StartCoroutine(RecalculateFPS());
+        StartCoroutine(RecalculateFPS()); 
     }
 
+
+    // Recalculates FPS every frame?
     IEnumerator RecalculateFPS()
     {
         while (true)
         {
-            fps = 1 / Time.deltaTime;
+            fps = 1 / Time.deltaTime; // standardizes time between system
             yield return new WaitForSeconds(1);
             if (fps < lowestFPS)
             {
@@ -32,11 +34,10 @@ public class FramesPerSecond : MonoBehaviour
             }
         }
     }
-    // Update is called once per frame
 
+    // Displayes fps on beside player
     void OnGUI()
     {
         GUI.Label(fpsRect, "FPS: " + fps,style);
-        
     }
 }
