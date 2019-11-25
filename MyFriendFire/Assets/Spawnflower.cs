@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// keeps trees from spawning to close to each other
-public class SpawnTrees : MonoBehaviour
+public class Spawnflower : MonoBehaviour
 {
+// keeps flowers from spawning to close to each other
+
     public GameObject[] trees;
     public Vector3 spawnValues;
     public float spawnWait;
@@ -26,14 +27,14 @@ public class SpawnTrees : MonoBehaviour
 
 
     void Update()
-    {   // the first attempt at spawning
+    {
         spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
     }
 
     IEnumerator waitToGrow()
     {
         yield return new WaitForSeconds(startWait);
-        // doesn't actually stop 
+
         while (!stop)//(GameObject.FindGameObjectsWithTag("tree").Length < 500)
         {
             randTree = Random.Range(0, 1);
@@ -87,3 +88,4 @@ public class SpawnTrees : MonoBehaviour
 
     }
 }
+

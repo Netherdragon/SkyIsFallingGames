@@ -2,39 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// script to allow trees to be cut down and produce firewood
 public class TreeBehavior : MonoBehaviour
 {
     private int treeHealth = 2;
     public GameObject wood;
-    public GameObject player;
+    //public GameObject player;
+
+    private void Start()
+    {
+        // needs a character to 
+        //player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     private void OnTriggerEnter(UnityEngine.Collider other)
     {
 
-
-        if (other.gameObject.name == "player")
+        // detects if player in range
+        if (other.gameObject.name == "GamePlayer")
         {
             treeHealth -= 1;
             Debug.Log("health: " + treeHealth);
         }
     }
 
-    IEnumerator Disapr()
-    {
-        Instantiate(wood, new Vector3(player.transform.position.x - 1f, 0, player.transform.position.z - 1f), Quaternion.identity);
-        yield return new WaitForSeconds(3);
-        Destroy(this.gameObject);
-    }
-
     private void Update()
     {
+        // once health gets to zero start code to spawn firewoood and destroy old tree clone
         if (treeHealth <= 0)
         {
-            transform.Rotate(90, 0, 0);  // tree.
-            Debug.Log("hit by: " + gameObject.name + " position: " + transform.position);
-            StartCoroutine("Disapr");
+            Debug.Log("chopped down");
+            giveFirewood();
         }
-            
+    }
 
+    void giveFirewood()
+    {
+        // spawns piece of wood and destroys tree model
+        GameObject woodClone = (GameObject)Instantiate(wood, transform.position, transform.rotation);
+        Destroy(this.gameObject);
     }
 }

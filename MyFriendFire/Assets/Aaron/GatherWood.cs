@@ -2,50 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// a script to pick up the firewood that is dropped when a tree is chopped down
 public class GatherWood : MonoBehaviour
 {
-    /*public bool haveItem = false;
-    
+    public int numberOfFirewood = 0;
 
-    GameObject playerPosition;
-    GameObject firePosition;
-    GameObject campground;
-    private bool inCampground = false;
-
-    private void Start()
+    /*private void OnCollisionEnter(Collision collision)
     {
-        playerPosition = GameObject.FindGameObjectWithTag("player");
-        campground = GameObject.FindGameObjectWithTag("campground");
-        firePosition = GameObject.FindGameObjectWithTag("fire");
-    }
+        if (collision.gameObject.tag == "firewood")
+        {
+            // can collect an infinte number of wood 
+            numberOfFirewood++;
+            Destroy(collision.gameObject);
+            Debug.Log("number of pieces: " + numberOfFirewood);
+        }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "player")
+        if (other.gameObject.tag == "firewood")
         {
-            gameObject.SetActive(false);
-            haveItem = true;
-            
-        }
-        else if(other.tag == "campground")
-        {
-            inCampground = true;
-            Debug.Log("in campground");
+            // can collect an infinte number of wood 
+            numberOfFirewood++;
+            Destroy(other.gameObject);
+            Debug.Log("number of pieces: " + numberOfFirewood);
         }
     }
-
-    private void Update()
-    {
-        //Debug.Log("haveItem: " + haveItem);
-
-        if (inCampground == true && ) //(Input.GetKey("right shift"))
-        {
-            Debug.Log("wood dropped");
-            gameObject.SetActive(true);
-            transform.position = firePosition.transform.position;
-            haveItem = false;
-            inCampground = false;
-        }
-    } */
 }

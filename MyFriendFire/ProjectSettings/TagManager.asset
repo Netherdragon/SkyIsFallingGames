@@ -12,6 +12,8 @@ TagManager:
   - ShowOnPause
   - NPC
   - Meat
+  - tree1
+  - firewood
   layers:
   - Default
   - TransparentFX
