@@ -33,6 +33,7 @@ public class Wolfattack : MonoBehaviour
             }
             Manager.instance.AddHealth(); // Game manager gains HP 
             Debug.Log("health " + health);
+       
         }
     }
 

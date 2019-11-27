@@ -19,9 +19,4 @@ public class Manager : MonoBehaviour
         HP++; // game manager increases player health when player touches meat.
     }
     
-
-    void Update()
-    {
-        
-    }
 }

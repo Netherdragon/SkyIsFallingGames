@@ -13,7 +13,10 @@ public class GenerateEnemies : MonoBehaviour
     
     void Start()
     {
-        EnemyDrop();
+    //    if (Time< 8600)
+    //    {
+            EnemyDrop();
+    //    }
     }
 
     // spawns enemies within a range

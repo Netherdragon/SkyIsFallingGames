@@ -925,7 +925,7 @@ GameObject:
   - component: {fileID: 3697946111973789302}
   m_Layer: 0
   m_Name: WolfReal
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -987,9 +987,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d74a4b28f94ad74187cd35c371f5778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetDistance: 0
-  AllowedDistance: 0
-  FollowSpeed: 0
 --- !u!1 &5851091565356108572
 GameObject:
   m_ObjectHideFlags: 0
