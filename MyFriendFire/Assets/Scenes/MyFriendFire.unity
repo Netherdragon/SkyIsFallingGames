@@ -2219,7 +2219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1139437783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,9 +2233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d74a4b28f94ad74187cd35c371f5778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetDistance: 5
-  AllowedDistance: 5
-  FollowSpeed: 0
 --- !u!54 &1139437784
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2276,7 +2273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139437782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.64, y: 1, z: -0.98400164}
+  m_LocalPosition: {x: 7.64, y: 0.1, z: -0.98400164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 316922374}
@@ -4040,6 +4037,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WolfReal
       objectReference: {fileID: 0}
+    - target: {fileID: 9199177333324478582, guid: 644c9b8d98e4ffe429714fa9e21bb86a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9199177333324478586, guid: 644c9b8d98e4ffe429714fa9e21bb86a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4048,7 +4050,7 @@ PrefabInstance:
     - target: {fileID: 9199177333324478586, guid: 644c9b8d98e4ffe429714fa9e21bb86a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 9199177333324478586, guid: 644c9b8d98e4ffe429714fa9e21bb86a,
         type: 3}
@@ -4094,6 +4096,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199177333324478583, guid: 644c9b8d98e4ffe429714fa9e21bb86a,
+        type: 3}
+      propertyPath: AllowedDistance
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 644c9b8d98e4ffe429714fa9e21bb86a, type: 3}

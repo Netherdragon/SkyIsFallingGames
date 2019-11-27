@@ -988,7 +988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetDistance: 0
-  AllowedDistance: 5
+  AllowedDistance: 0
   FollowSpeed: 0
 --- !u!1 &5851091565356108572
 GameObject:
