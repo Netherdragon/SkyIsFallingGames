@@ -5,11 +5,17 @@ using UnityEngine;
 public class DestroyonTrigger : MonoBehaviour
 {
 
-  //  private void OnTriggerEnter(myTrigger : collider)
-  //  {
-  //      if other.gameObject.tag("Player");
-  //      {
-  //          Destroy(gameObject, 1f);
-  //      }
-  //  }
+    public GameObject Meat;
+
+    public virtual void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player") // player tag collides with rabbit obj
+        {
+            Debug.Log("Drop meat");
+            Destroy(this.gameObject); // rabbit is destroyed
+            GameObject meatClone = (GameObject)Instantiate(Meat, transform.position, transform.rotation);
+
+        }
+    }
+
 }
