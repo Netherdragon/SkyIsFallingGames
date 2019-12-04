@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class destroyMeat : DestroyonTrigger
+public class destroyMeat : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -12,7 +12,7 @@ public class destroyMeat : DestroyonTrigger
     }
 
     // Update is called once per frame
-    public override void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {

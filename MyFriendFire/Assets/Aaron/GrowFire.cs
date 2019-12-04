@@ -9,8 +9,7 @@ public class GrowFire : MonoBehaviour
     public GameObject fire;
     private void Start()
     {
-        wood = GameObject.FindGameObjectWithTag("Player");
-        
+        wood = GameObject.FindGameObjectWithTag("Player");  
     }
     private void OnTriggerEnter(UnityEngine.Collider other)
     {
@@ -28,7 +27,7 @@ public class GrowFire : MonoBehaviour
             {
                 Debug.Log("no firewood");
             }
-            
         }
     }
+
 }

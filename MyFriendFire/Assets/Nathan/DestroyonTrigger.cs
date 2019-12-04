@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyonTrigger : MonoBehaviour
 {
 
-    public GameObject Meat;
+   public GameObject Meat;
 
     public virtual void OnTriggerEnter(Collider other)
     {
@@ -13,9 +13,14 @@ public class DestroyonTrigger : MonoBehaviour
         {
             Debug.Log("Drop meat");
             Destroy(this.gameObject); // rabbit is destroyed
-            GameObject meatClone = (GameObject)Instantiate(Meat, transform.position, transform.rotation);
-
+            //GameObject meatClone = (GameObject)Instantiate(Meat, transform.position, transform.rotation);
+            dropMeat();
         }
+    }
+
+    void dropMeat()
+    {
+        GameObject meatClone = (GameObject)Instantiate(Meat, transform.position, transform.rotation);
     }
 
 }

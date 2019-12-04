@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 	private Rigidbody playerBody;
 	private Vector3 inputVector;
-    private float speed = 50;
+    private float speed = 35;
     // Start is called before the first frame update
     void Start()
     {

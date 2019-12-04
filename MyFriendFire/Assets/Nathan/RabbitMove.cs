@@ -65,12 +65,4 @@ public class RabbitMove : MonoBehaviour
         isWandering = false;
     }
 
-    private void OnDestroy()
-    {
-       //Instantiate(DropItems, transform.position, DropItems.transform.rotation);
-    }
-
-    void Die()
-    {
-    }
 }
