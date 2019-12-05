@@ -7,17 +7,6 @@ public class GatherWood : MonoBehaviour
 {
     public int numberOfFirewood = 0;
 
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "firewood")
-        {
-            // can collect an infinte number of wood 
-            numberOfFirewood++;
-            Destroy(collision.gameObject);
-            Debug.Log("number of pieces: " + numberOfFirewood);
-        }
-    }*/
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "firewood")
