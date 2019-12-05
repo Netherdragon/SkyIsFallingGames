@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HelpMenu.unity
     guid: 512c36157d0006d42a1029b6bb05844f
+  - enabled: 1
+    path: Assets/MyFriendWolf.unity
+    guid: 143779bb58f9aee40b8c36c5a7178e45
   m_configObjects: {}
