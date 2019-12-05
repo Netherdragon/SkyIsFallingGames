@@ -39,7 +39,7 @@ public class TreeBehavior : MonoBehaviour
     void giveFirewood()
     {
         // spawns piece of wood and destroys tree model
-        GameObject woodClone = (GameObject)Instantiate(wood, transform.position, transform.rotation);
+        GameObject woodClone = (GameObject)Instantiate(wood, transform.position + new Vector3(0, 2, 0), transform.rotation * Quaternion.Euler(0, 0, 90));
         Destroy(this.gameObject);
     }
 }

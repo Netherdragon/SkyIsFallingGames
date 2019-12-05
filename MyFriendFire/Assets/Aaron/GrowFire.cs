@@ -11,6 +11,11 @@ public class GrowFire : MonoBehaviour
     {
         wood = GameObject.FindGameObjectWithTag("Player");  
     }
+
+    private void Update()
+    {
+        
+    }
     private void OnTriggerEnter(UnityEngine.Collider other)
     {
         
